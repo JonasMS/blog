@@ -24,15 +24,15 @@ var Navigation = React.createClass({
 var History = React.createClass({
   render: function(){
     return(
-      <div className="mainContainer">
-        <div className="header mdl-card mdl-shadow--2dp mdl-js-layout mdl-layout--fixed-header">
+      <div id="mainContainer">
+        <div className="header mdl-js-layout mdl-layout--fixed-header">
           <header className="mdl-layout__header">
             <div className="mdl-layout__header-row">
               <nav className="mdl-navigation">
-                <a className="mdl-navigation__link" href="">LinkedIn</a>
+                <a className="mdl-navigation__link" href="">Me</a>
                 <a className="mdl-navigation__link" href="">Projects</a>
-                <a className="mdl-navigation__link" href="">Adventures</a>
                 <a className="mdl-navigation__link" href="">Blog</a>
+                <a className="mdl-navigation__link" href="">Adventures</a>
               </nav>
             </div>
           </header>
@@ -65,7 +65,20 @@ var History = React.createClass({
             </li>
           </ul>
         </div>
+        <RaisedButton id="emailBtn" text="Email Me"/>
       </div>
+
+    );
+  }
+});
+
+var RaisedButton = React.createClass ({
+  render: function() {
+
+    return(
+        <button id={this.props.id} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          {this.props.text}
+        </button>
     );
   }
 });

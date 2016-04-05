@@ -1,0 +1,74 @@
+/* Typography
+=============================*/
+.historyContainer {
+  line-height: 1.5;
+}
+
+#highlightsList {
+  list-style-type: none;
+}
+
+/* Layout
+=============================*/
+#mainContainer {
+  width: 30%;
+  margin: 15% 0 0 100px;
+
+}
+
+/*correct a style that's part of an MDL feature */
+#mainContainer > .mdl-layout__container {
+  position: relative;
+}
+
+/*correct a style that's part of an MDL feature */
+.mdl-layout__header > .mdl-layout__header-row {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#emailBtn {
+  margin-top: 5px;
+}
+
+.header, .historyContainer {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.historyContainer {
+}
+
+#highlightsList {
+    margin: 15px 0 15px 0;
+    padding: 0 10px 0 20px;
+}
+
+#highlightsList > li {
+  margin-bottom: 8px;
+}
+
+.yearHighlight {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.year {
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: right;
+}
+
+/* Buttons
+=============================*/
+
+/* Logos & Icons
+=============================*/
+
+/* Media Queries
+=============================*/
