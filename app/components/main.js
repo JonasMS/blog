@@ -39,30 +39,12 @@ var History = React.createClass({
         </div>
         <div className="historyContainer mdl-card mdl-shadow--2dp">
           <ul id="highlightsList">
-            <li>
-              <span className="year">2010:</span>
-              <span className="yearHighlight">Studied at Tel Aviv University</span>
-            </li>
-            <li>
-              <span className="year">2011:</span>
-              <span className="yearHighlight">Developed the operations of a grocery delivery service at STRATAM Consulting Latin America</span>
-            </li>
-             <li>
-              <span className="year">2012/13:</span>
-              <span className="yearHighlight">Researched the sharing economy at Mesh Labs</span>
-            </li>
-             <li>
-              <span className="year">2014:</span>
-              <span className="yearHighlight">Recruited talent at silicon valley tech companies with Binc</span>
-            </li>
-             <li>
-              <span className="year">2015:</span>
-              <span className="yearHighlight">Raised venture capital and made the world a better place with Enrou, began bringing people together with Tea with Strangers, finished studying Philosophy and Business at UCLA</span>
-            </li>
-             <li>
-              <span className="year">Current:</span>
-              <span className="yearHighlight">Learning web development</span>
-            </li>
+            <HistoryEvent year="2010" highlight="Studied at Tel Aviv University"/>
+            <HistoryEvent year="2011" highlight="Developed the operations of a grocery delivery service at STRATAM Consulting Latin America"/>
+            <HistoryEvent year="2012/13" highlight="Researched the sharing economy at Mesh Labs"/>
+            <HistoryEvent year="2014" highlight="Recruited talent at silicon valley tech companies with Binc"/>
+            <HistoryEvent year="2015" highlight="Raised venture capital and made the world a better place with Enrou, began bringing people together with Tea with Strangers, finished studying Philosophy and Business at UCLA"/>
+            <HistoryEvent year="Current" highlight="Learning web development"/>
           </ul>
         </div>
         <RaisedButton id="emailBtn" text="Email Me"/>
@@ -72,9 +54,19 @@ var History = React.createClass({
   }
 });
 
+var HistoryEvent = React.createClass ({
+  render: function() {
+    return (
+      <li>
+        <span className="year">{this.props.year}:</span>
+        <span className="yearHighlight">{this.props.highlight}</span>
+      </li>
+    );
+  }
+});
+
 var RaisedButton = React.createClass ({
   render: function() {
-
     return(
         <button id={this.props.id} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
           {this.props.text}
